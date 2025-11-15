@@ -1,0 +1,60 @@
+# Binaries for programs and plugins
+*.exe
+*.test
+*.out
+mcp-zero
+
+# Ignore demo and adhoc folders
+demo/
+adhoc/
+
+# Go workspace and vendor
+/vendor/
+go.work
+go.work.sum
+
+# Test artifacts and coverage
+*.coverprofile
+coverage.txt
+*.test.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# Build artifacts
+/dist/
+/build/
+/bin/
+
+# Temporary files
+*.tmp
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Debug and profiling
+*.prof
+*.trace
+debug
+__debug_bin*
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
