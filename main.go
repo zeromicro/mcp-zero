@@ -42,7 +42,7 @@ func main() {
 	// Register create_api_spec tool (T081 - User Story 5)
 	mcp.AddTool(server, &mcp.Tool{
 		Name:        "create_api_spec",
-		Description: "Create a sample API specification file for go-zero",
+		Description: "Create a sample API specification file for go-zero. IMPORTANT: Always define concrete types for request and response - do NOT use 'any' type in .api files as it's not supported by go-zero",
 	}, tools.CreateAPISpec)
 
 	// Register analyze_project tool (T097 - User Story 6)
