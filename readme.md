@@ -125,6 +125,48 @@ Edit `%APPDATA%\Claude\claude_desktop_config.json`:
 }
 ```
 
+## Configuration for Cursor
+
+1. Install mcp-zero:
+
+   ```bash
+   go install github.com/zeromicro/mcp-zero@latest
+   ```
+
+2. In Cursor: **Cursor Settings** → **Tools & MCP** → **New MCP Server**
+
+3. Add the following configuration (replace paths with your own Go bin path):
+
+   ### macOS / Linux
+
+   ```json
+   {
+     "mcpServers": {
+       "mcp-zero": {
+         "command": "/Users/yourname/go/bin/mcp-zero",
+         "env": {
+           "GOCTL_PATH": "/Users/yourname/go/bin/goctl"
+         }
+       }
+     }
+   }
+   ```
+
+   ### Windows
+
+   ```json
+   {
+     "mcpServers": {
+       "mcp-zero": {
+         "command": "C:\\Users\\30454\\go\\bin\\mcp-zero.exe",
+         "env": {
+           "GOCTL_PATH": "C:\\Users\\30454\\go\\bin\\goctl.exe"
+         }
+       }
+     }
+   }
+   ```
+
 ## Available Tools
 
 ### 1. create_api_service

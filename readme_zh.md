@@ -108,6 +108,48 @@ go build -o go-zero-mcp main.go
 }
 ```
 
+## 配置 Cursor
+
+1. 安装 mcp-zero：
+
+   ```bash
+   go install github.com/zeromicro/mcp-zero@latest
+   ```
+
+2. 在 Cursor 中：**Cursor Settings** → **Tools & MCP** → **New MCP Server**
+
+3. 添加如下配置（请将路径改为你自己的 Go bin 路径）：
+
+   ### macOS / Linux
+
+   ```json
+   {
+     "mcpServers": {
+       "mcp-zero": {
+         "command": "/Users/yourname/go/bin/mcp-zero",
+         "env": {
+           "GOCTL_PATH": "/Users/yourname/go/bin/goctl"
+         }
+       }
+     }
+   }
+   ```
+
+   ### Windows
+
+   ```json
+   {
+     "mcpServers": {
+       "mcp-zero": {
+         "command": "C:\\Users\\30454\\go\\bin\\mcp-zero.exe",
+         "env": {
+           "GOCTL_PATH": "C:\\Users\\30454\\go\\bin\\goctl.exe"
+         }
+       }
+     }
+   }
+   ```
+
 ## 可用工具
 
 ### 1. create_api_service
